@@ -106,12 +106,12 @@ body {
     display: inline-block;
 }
 
-.principal .calendar-icon {
+/* .principal .calendar-icon {
     position: absolute;
     right: 16px;
     top: 16px;
     pointer-events: none;
-}
+} */
 
 .principal .horarios {
     display: flex;
