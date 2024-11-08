@@ -9,6 +9,8 @@ const formattedDate = `${year}-${month}-${day}`
 const calendar = document.getElementById("data")
 const form = document.querySelector("form")
 const btn = document.querySelector("button")
+const txtPrimary = document.getElementsByClassName("principal")
+const txtSecundary = document.getElementsByClassName("secundario")
 
 
 // Impede que dias anteriores ao hoje sejam selecionados
@@ -19,8 +21,11 @@ calendar.value = formattedDate
 
 form.onsubmit = (event) => {
     event.preventDefault()
-    weekend()
-    time()
+    if (weekend() && time()) {
+        txtPrimary[0].classList.add("ocultar")
+        txtSecundary[0].classList.remove("ocultar")
+
+    }
 }
 
 function weekend() {
@@ -29,9 +34,11 @@ function weekend() {
 
     if (dayWeekend === 0 || dayWeekend === 6) {
         alert("Não atendemos nos finais de semana.")
+        return false
     } else {
-        btn.classList.remove("desativado")
+        return true
     }
+
 }
 
 function time() {
@@ -40,8 +47,10 @@ function time() {
     if (selectedTime) {
         selectedTime.setAttribute("disabled", "true")
         selectedTime.classList.add("desativado")
+        return true
     } else {
         alert("Por favor, selecione um horário")
+        return false
     }
 
 }
