@@ -190,5 +190,5 @@ button[type="submit"].desativado {
 }
 
 .ocultar {
-    opacity: 0;
+    display: none;
 }
