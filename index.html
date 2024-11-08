@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Day</title>
+    <link rel="stylesheet" href="style.css">
+
+<body>
+    <header>
+        <div class="logo">
+            <h3>Hair Day</h3>
+            <img src="images/scissors.png" alt="">
+        </div>
+    </header>
+
+    <main>
+        <div class="principal">
+            <h1>Agende um atendimento</h1>
+            <p>Selecione data, horário e informe o nome do cliente para criar o agendamento</p>
+
+            <form action="">
+                <label for="data">Data</label><br>
+                <div class="date-input-wrapper">
+                    <input type="date" name="data" id="data" class="date-input" required>
+                    <img src="images/seta.png" alt="" class="calendar-icon">
+                </div><br>
+
+                <label for="horario">Horários</label>
+                <p class="paragrafo-horario">Manhã</p>
+
+                <div class="horarios">
+                    <input type="radio" name="horario" id="horario-09">
+                    <label for="horario-09">09:00</label>
+
+                    <input type="radio" name="horario" id="horario-10">
+                    <label for="horario-10">10:00</label>
+
+                    <input type="radio" name="horario" id="horario-11">
+                    <label for="horario-11">11:00</label>
+
+                    <input type="radio" name="horario" id="horario-12">
+                    <label for="horario-12">12:00</label>
+                </div>
+
+                <p class="paragrafo-horario">Tarde</p>
+
+                <div class="horarios">
+                    <input type="radio" name="horario" id="horario-14">
+                    <label for="horario-14">14:00</label>
+
+                    <input type="radio" name="horario" id="horario-15">
+                    <label for="horario-15">15:00</label>
+
+                    <input type="radio" name="horario" id="horario-16">
+                    <label for="horario-16">16:00</label>
+
+                    <input type="radio" name="horario" id="horario-17">
+                    <label for="horario-17">17:00</label>
+                </div>
+
+                <p class="paragrafo-horario">Noite</p>
+
+                <div class="horarios">
+                    <input type="radio" name="horario" id="horario-18">
+                    <label for="horario-18">18:00</label>
+
+                    <input type="radio" name="horario" id="horario-19">
+                    <label for="horario-19">19:00</label>
+
+                    <input type="radio" name="horario" id="horario-20">
+                    <label for="horario-20">20:00</label>
+
+                </div><br>
+
+                <label for="cliente">Cliente</label><br>
+                <input type="text" name="cliente" id="cliente" required><br>
+
+                <button type="submit" class="desativado">AGENDAR</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>

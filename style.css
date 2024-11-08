@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+    list-style: none;
+}
+
+:root {
+    --yellow-light: #dbc170;
+    --yellow: #b8952e;
+    --yellow-dark: #846f2e;
+    --gray-100: #f5f4f5;
+    --gray-200: #b2afb6;
+    --gray-300: #98959d;
+    --gray-400: #7a767f;
+    --gray-500: #3e3c41;
+    --gray-600: #2e2c30;
+    --gray-700: #232225;
+    --gray-800: #19181b;
+    --gray-900: #050505;
+
+    --font-primary: "Catamaran", sans-serif;
+
+    --title-lg: 700 24px/32px var(--font-primary);
+    --title-md: 700 16px/24px var(--font-primary);
+    --title-sm: 700 14px/20px var(--font-primary);
+    --text-md: 400 16px/24px var(--font-primary);
+    --text-sm: 400 14px/20px var(--font-primary);
+
+}
+
+body {
+    background-color: rgb(25, 25, 25);
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    background-color: var(--gray-600);
+    padding: 12px 20px;
+    width: 139px;
+    height: 56px;
+    border-bottom-right-radius: 20px;
+}
+
+.logo h3 {
+    color: var(--yellow);
+    font: 500 20px/30px var(--font-primary)
+}
+
+.logo img {
+    width: 19px;
+    height: 19px;
+}
+
+.principal {
+    background-color: var(--gray-700);
+    padding: 40px;
+    margin: 14px 12px;
+    position: absolute;
+    top: 14px;
+    z-index: -1;
+    border-radius: 12px;
+    width: 95vw;
+}
+
+.principal h1 {
+    color: var(--gray-100);
+    font: var(--title-lg);
+}
+
+.principal p {
+    color: var(--gray-300);
+    font: var(--text-sm);
+    margin: 4px 0 24px 0;
+}
+
+.principal label {
+    color: var(--gray-200);
+    font: var(--title-md);
+}
+
+.principal input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+.principal .date-input {
+    width: 250px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: var(--gray-700);
+    border: 2px solid var(--gray-500);
+    color: var(--gray-200);
+    font: var(--text-md);
+    background: url(images/date.png) no-repeat;
+    padding-left: 34px;
+    background-position: left 12px center;
+    background-size: 20px;
+    margin: 8px 0 32px 0;
+}
+
+.principal .date-input-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.principal .calendar-icon {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    pointer-events: none;
+}
+
+.principal .horarios {
+    display: flex;
+    gap: 8px;
+}
+
+.principal input[type="radio"] {
+    display: none;
+}
+
+.principal .horarios label {
+    width: 79px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: var(--gray-500);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.principal input[type="radio"]:checked+label {
+    border: 2px solid var(--yellow);
+    color: var(--yellow);
+}
+
+input[type="radio"].desativado+label,
+button[type="submit"].desativado {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.principal .paragrafo-horario {
+    margin: 10px 0 10px 0;
+}
+
+.principal input[type="text"] {
+    width: 250px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: var(--gray-700);
+    border: 2px solid var(--gray-500);
+    color: var(--gray-200);
+    font: var(--text-md);
+    background: url(images/cliente.png) no-repeat;
+    padding-left: 34px;
+    background-position: left 12px center;
+    background-size: 20px;
+    margin: 8px 0 32px 0;
+}
+
+.principal button[type="submit"] {
+    width: 250px;
+    height: 48px;
+    background-color: var(--yellow);
+    color: var(--gray-900);
+    font: var(--title-sm);
+    border: 0;
+    border-radius: 8px;
+}
