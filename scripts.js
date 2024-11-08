@@ -23,7 +23,7 @@ form.onsubmit = (event) => {
     event.preventDefault()
     if (weekend() && time()) {
         txtPrimary[0].classList.add("ocultar")
-        txtSecundary[0].classList.remove("ocultar")
+        txtSecundary[0].style.visibility = "visible"
 
     }
 }
